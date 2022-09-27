@@ -1,0 +1,31 @@
+#blurred-image-ontainer {
+background-color: blueviolet;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+background-position-y: center;
+}
+
+
+.img-src {
+position: fixed;
+background-position: center;
+background-size: cover;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: -1;
+}
+
+.blurred-img { opacity: 0; }
+
+
+
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 5em;
+}
