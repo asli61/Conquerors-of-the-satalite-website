@@ -1,4 +1,5 @@
-#blurred-image-container {
+#bg-image-container {
+background-image:url('https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/60/darken/25/0*I7mXgSon9oco-rim.jpeg');
 background-color: blueviolet;
 background-repeat: no-repeat;
 background-size: cover;
@@ -18,8 +19,6 @@ left: 0;
 right: 0;
 z-index: -1;
 }
-
-.blurred-img { opacity: 0; }
 
 
 
