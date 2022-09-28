@@ -1,4 +1,4 @@
-var run = $(window).scroll(function() {
+$(window).scroll(function() {
     // Get scroll position
 
     alert("debug allert");
@@ -14,10 +14,6 @@ var run = $(window).scroll(function() {
         $('.blurred-img').css('opacity', 0.5);}
 });
 
-run();
-
 alert("degug alertt2");
 
 alert("debugallert");
-
-run();
