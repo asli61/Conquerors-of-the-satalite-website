@@ -9,6 +9,7 @@
     <title>Concuerors of the Satalite</title>
 </head>
 <body>
+    <?php include "navbar.php"; ?>
 
 
     <div id="bg-image-container">
