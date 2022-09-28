@@ -1,5 +1,7 @@
 $(window).scroll(function() {
     // Get scroll position
+
+    alert("debug allert");
     var s = $(window).scrollTop(),
     // scroll value and opacity
     opacityVal = (s / 150.0);
