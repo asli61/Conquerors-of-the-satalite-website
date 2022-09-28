@@ -13,3 +13,5 @@ $(window).scroll(function() {
     if(opacityVal >= 0.5){
         $('.blurred-img').css('opacity', 0.5);}
 });
+
+alert("degug alertt2");
