@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
+    <script>
+    (window).scroll(function() {
+        // Get scroll position
+    
+        alert("debug allert");
+        var s = $(window).scrollTop(),
+        // scroll value and opacity
+        opacityVal = (s / 150.0);
+        // opacity value 0% to 100%
+        
+        if(opacityVal < 0.5){ 
+        $('.blurred-img').css('opacity', opacityVal);}
+    
+        if(opacityVal >= 0.5){
+            $('.blurred-img').css('opacity', 0.5);}
+    });
+    alert("debug allert out");
+    </script>
     <title>Concuerors of the Satalite</title>
 </head>
 <body>
