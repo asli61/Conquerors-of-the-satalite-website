@@ -1,4 +1,4 @@
-$(window).scroll(function() {
+(window).scroll(function() {
     // Get scroll position
 
     alert("debug allert");
