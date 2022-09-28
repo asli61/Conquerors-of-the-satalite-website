@@ -14,6 +14,8 @@ var run = (window).scroll(function() {
         $('.blurred-img').css('opacity', 0.5);}
 });
 
+run();
+
 alert("degug alertt2");
 
 alert("debugallert");
