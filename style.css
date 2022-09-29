@@ -18,13 +18,15 @@ justify-content: center;
 align-items: center;
 font-size: 5em;
 margin-top: 0px;
+
 }
 
 h2.header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
+    justify-content: left;
+    margin-left: 300px;
+    align-items: left;
+    font-size: 3em;
     margin-top: 0px;
 }
 
@@ -32,7 +34,8 @@ h2.header {
 .m-paragraph {
 justify-content: center;
 align-items: center;
-text-align: center;
+text-align: left;
 margin: auto;
 width: 1300px;
+font-size: 20px;
 }

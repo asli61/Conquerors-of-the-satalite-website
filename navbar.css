@@ -45,6 +45,8 @@
   /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
+  box-sizing: border-box;
+  height: 80px;
   overflow: hidden;
 }
 
@@ -53,9 +55,9 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 25px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 19px;
   box-sizing: border-box;
 }
 
@@ -73,4 +75,5 @@
 
 .active {
   width: 120px;
+  font-size: 19px;
 }
