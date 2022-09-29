@@ -9,7 +9,7 @@ background-position-y: center;
 
 
 .img-src {
-background-image:url('https://images3.alphacoders.com/677/677357.png');
+background-image:url('images/bg_versiyon_3.jpg');
 position: fixed;
 background-position: center;
 background-size: cover;
@@ -28,4 +28,13 @@ justify-content: center;
 align-items: center;
 font-size: 5em;
 margin-top: 0px;
+}
+
+.m-paragraph{
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: auto;
+
+width: 1300px;
 }
