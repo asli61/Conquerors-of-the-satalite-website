@@ -1,3 +1,7 @@
+* {
+    font-family:Geneva, Verdana, sans-serif;
+}
+
 .img-src {
 background-image:url('images/bg_versiyon_3.jpg');
 position: fixed;
