@@ -28,8 +28,8 @@ margin-top: 5px;
 h2.header {
     display: flex;
     justify-content: left;
-    margin-left: 300px;
-    align-items: left;
+    margin-left: 16%;
+   /*align-items: left; syntax error. It doesn't accept "left" as a value. Also fix the h2 incompability with diffrent screen sizes. */
     font-size: 3em;
     margin-top: 5px;
 }
