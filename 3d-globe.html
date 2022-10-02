@@ -39,7 +39,7 @@ function init(); {
 
     let loader = new THREE.GLFTLoader({antialias:true});
     loader.load('three.js-master/src/scene.gltf', function(gltf){
-        scene.add(gltf.Moonquake_viewer_in_ArcGlobe);
+        scene.add(gltf.source);
         renderer.render(scene,camera);
     });
 }
