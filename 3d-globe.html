@@ -17,9 +17,13 @@
 
 <script>
 
+import * as THREE from 'three';
+
 let scene, camera, renderer;
 
 function init(); {
+
+    
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xdddddd);
@@ -35,7 +39,7 @@ function init(); {
 
     let loader = new THREE.GLFTLoader({antialias:true});
     loader.load('three.js-master/src/GIS_Files/GIS_files/Moonquake_viewer_in_ArcGlobe.3dd', function(gltf){
-        scene.add(gltf.scene);
+        scene.add(gltf.Moonquake_viewer_in_ArcGlobe);
         renderer.render(scene,camera);
     });
 }
