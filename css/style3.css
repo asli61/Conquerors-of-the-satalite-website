@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181b;
+    
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    max-width: 1000px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: large;
+    font-weight: 800;
+    align-items: center;
+}
+
+.teamname {
+    font-size: 400%;
+    margin-left: auto;
+    letter-spacing: 5px;
+    background: linear-gradient(
+        130deg, #4BB2E8,#8645FF
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(
+        130deg, #4BB2E8,#8645FF
+    );
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 1.2s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(
+        130deg, #057bbb,#5c15e0
+    );
+    border-radius: 12px;
+    
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #6F38EC;
+    z-index: -100;
+  
+  
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4 {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 23px;
+}
+
+header image{
+    position: relative;
+
+}
+
+header .image::before{
+    content: "COTS";
+    position:fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 21rem;
+    font-weight: 700;
+    line-height: 20rem;
+    background: linear-gradient(
+        130deg, #4BB2E8,#8645FF
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+    z-index: -100;
+    font-family: 'Babas Neue', sans-serif;
+    background-attachment : fixed; 
+    
+  
+}
+
+header .image img{
+    max-width: 400;
+    margin: auto;
+    width: 350px;
+    position: relative;
+    
+    
+    
+}
+
+section .header2{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    
+    
+    font-size: 2.25rem;
+    font-weight: 600;
+    font-family: 'Cabin', sans-serif;
+}
+
+.resourcestit{
+    font-family: "Cabin", sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+   
+    font-weight: 600;
+    font-size: 2.50rem;
+    
+}
+
+.pricing{
+    margin-top: 3rem;
+    display:flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-left: 0px;
+    
+    
+}
+
+.refer{
+    font-size: 2.25rem;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(
+        320deg, rgb(11, 30, 243),#5c15e0
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+
+
+.ri-map-pin-line{
+    background: linear-gradient(
+        130deg, #4BB2E8,rgb(136, 71, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.h41{
+    font-family: 'Cabin', sans-serif;
+    font-size: 4rem;
+    font-size: 500 ;
+}
+
+.pricing .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    align-items: center;
+    left: 28.5%;
+    
+    
+}
+
+.pricing .card:hover{
+    background-color: #323232;
+    color: #fff;
+}
+
+.docum{
+    font-size: 2.25rem;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(
+        320deg, rgb(11, 30, 243),#5c15e0
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+
+.lnk {
+    background: linear-gradient(
+        130deg, #4BB2E8,#8645FF,
+    );
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:rgb(35, 167, 219);
+   
+}
+
+p{
+    color: white;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.ri-time-line{
+    background: linear-gradient(
+        130deg, #4BB2E8,rgb(136, 71, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ri-arrow-down-line{
+    background: linear-gradient(
+        130deg, #4BB2E8,rgb(136, 71, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}

@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Merriweather&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .globe {
+    height: 110vh;
+    background-image: url(../img/space-wallpaper2.jpg);
+    perspective: 1000px;
+  }
+  
+  .globe-content-gorsel #stars {
+    position: fixed;
+    top: -1em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .globe-content-gorsel #stars .star {
+    position: absolute;
+    width: 2px;
+    /*height: 2px;*/
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  .globe-content-gorsel #asters_wrap {
+    position: relative;
+    left: 10px;
+    top: 100px;
+    width: 100%;
+    transform: rotate(25deg);
+    transform-style: preserve-3d;
+  }
+
+  
+  .globe-content-gorsel .earth {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: url(../img/moon-texture.jpg);
+    background-size: 400px 100%;
+    transform: rotate(0deg);
+    animation: spin 8s infinite linear;
+  }
+  
+  .globe-content-gorsel .earth:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 230px 0px, rgb(255, 255, 255), #000);
+    mix-blend-mode: overlay;
+  }
+  
+  @keyframes rotate {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+  }
+  
+  @keyframes spin {
+    from {background-position: 0px;}
+    to {background-position: 130px;}
+  }
+
+  .globe-content {
+    display: flex;
+    margin-top: 0rem;
+    align-items: left;
+  }
+  .globe-content-gorsel {
+    flex: 1;
+    color: #fdfdfd;
+    min-height: 10rem;
+    margin-right: -3rem;
+    z-index: 2.5;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-left: 3rem;
+  }
+  .globe-content .globe-content-yazi {
+    padding-left: 3rem;
+    border-radius: 30px;
+    flex: 1.3;
+    min-height: 18rem;
+    align-items: left;
+    color: #fdfdfd;
+  }
+  .globe-content .globe-content-yazi h2 {
+    font-size: 4rem;
+    color: white;
+    font-family: "Changa", sans-serif;
+
+  }
+  .globe-content .globe-content-yazi p {
+    font-family: "Changa", sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+  }
+  .globe-content .globe-content-yazi p {
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  .btn {
+    background-image: linear-gradient(to right bottom, blue, purple), url(../img/allMoonquakes.jpg);   
+    color: rgb(231, 231, 231);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    transition: ease all 1s;
+    border-radius: 40px;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-image: linear-gradient(to right bottom, rgb(77, 79, 255), rgb(197, 0, 184)), url(../img/allMoonquakes.jpg); ;
+    color: rgb(231, 231, 231);
+    transition: ease all 1s;
+    font-size: 0.9rem;
+  }
+  .btn-primary {
+    background-color: blue;
+    color: #fdfdfd;
+    transition: ease all 1s;
+  }
+  .btn-primary:hover {
+    background-color: #fdfdfd;
+    color: blue;
+    transition: ease all 1s;
+  }
+  

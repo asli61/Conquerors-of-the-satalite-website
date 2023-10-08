@@ -1,0 +1,252 @@
+/**BUTONLAR**/
+
+.btn{
+    
+
+    background-color: $light-color;
+    color: $primary-color;
+    
+    padding: 0rem 0.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    transition: all .5s;
+
+    &:hover{
+        background-color: $primary-color;
+        color: $light-color;
+        
+    }
+    &-primary{
+        background-color: $primary-color;
+        color: $light-color;
+
+        &:hover{
+            background-color: $light-color;
+            color: $primary-color;
+        }
+    }
+}
+
+
+/**BADGES**/
+
+.badge{
+
+    border: none;
+    padding: 0.65rem 0.75rem ;
+    font-size: 0.8rem;
+    color: $light-color;
+    background-color: $primary-color;
+    margin: 2.5rem;
+    font-family: $primary-font;
+
+    &-tech{
+        background-color: $comment-color;
+    }
+
+    &-game{
+        background-color: $date-color ;
+    }
+}
+
+
+/**RATINGS**/
+
+.rating{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: $light-color;
+    opacity: 0;
+    z-index: 100;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-family: $primary-font;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 50%;
+    color: $primary-color;
+}
+
+
+/**REVİEWS**/
+
+.review{
+
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin-left: 3rem;
+    border-left: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    transform: skew(-25deg);
+
+    &-title{
+        font-size: 1.2rem;
+    }
+
+    & > *{
+        transform: skew(25deg);
+    }
+
+    &-tags{
+        font-size: 0.77rem;
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+
+    &-text{
+        margin: 0.5rem 0;
+        font-size: 0.75rem;
+
+    }
+
+    &-user{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 2.3rem;
+            height: 2.3rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+        }
+
+        &-detail {
+            font-family: $primary-font;
+            margin-right: 1.5rem;
+
+            .review-user-name{
+                color: $primary-color;
+            }
+
+            .review-user-date{
+                color: $date-color;
+            }
+
+        }
+
+        &-platform{
+            color: $light-color;
+            
+            .fab{
+                margin: 0 0.3rem;
+                transition: all 0.5s;
+
+                &:hover{
+                color: $primary-color;
+                }
+            }
+        }
+
+        &-rating{
+
+            margin-left: auto;
+            .checked{
+
+                color: $date-color
+
+            }
+        }
+    }
+}
+
+.card{
+    //background-color: red;
+    height: 27rem;
+    perspective: 500px;
+
+    &:hover .card-inner{
+        transform: rotateY( 180deg ) ;
+        transition: transform 1.2s;
+    }
+
+    &-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1.2s;
+        transform-style: preserve-3d;
+    }
+
+    .card-front, .card-back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        //transition: all 1.2s;
+        border-radius: 40px;
+    }
+    .card-front{
+        background-color: $secondary-color ;
+        height: 530px;
+        
+        img{
+            border-radius: 40px;
+        }
+        h4{
+            font-size: 1.3rem;
+            //padding-bottom: -1000rem;
+        }
+    }
+
+    .card-back{
+        background-color: $primary-color;
+        transform: rotateY(180deg);
+        display: table;
+        
+        &-content{
+            display: table-cell;
+            vertical-align: middle;
+
+            p{
+                font-size: 1rem;
+                color: #fff;
+            }
+        }
+    }
+
+    /*&:hover .card-front{
+        transform: rotateY(180deg);
+    }
+    &:hover .card-back{
+        transform: none;
+    }*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

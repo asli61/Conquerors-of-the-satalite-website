@@ -1,0 +1,1467 @@
+@charset "UTF-8";
+/** FONTS
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif;
+**/
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Merriweather&display=swap");
+/** VARIABLES SETTINGS **/
+/** UTILITIES **/
+.bg-dark {
+  background-color: #14151A;
+}
+.bg-light {
+  background-color: #fdfdfd;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.text-white {
+  color: #fdfdfd;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-normal-boyut {
+  font-size: 1.2rem;
+}
+
+.text-primary {
+  color: blue;
+}
+
+.text-buyuk-boyut {
+  font-size: 3rem;
+}
+
+/** MIXINS **/
+/**BUTONLAR**/
+.btn {
+  background-color: #fdfdfd;
+  color: blue;
+  padding: 0rem 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background-color: blue;
+  color: #fdfdfd;
+}
+.btn-primary {
+  background-color: blue;
+  color: #fdfdfd;
+}
+.btn-primary:hover {
+  background-color: #fdfdfd;
+  color: blue;
+}
+
+/**BADGES**/
+.badge {
+  border: none;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.8rem;
+  color: #fdfdfd;
+  background-color: blue;
+  margin: 2.5rem;
+  font-family: "Changa", sans-serif;
+}
+.badge-tech {
+  background-color: #08abbd;
+}
+.badge-game {
+  background-color: #ffb320;
+}
+
+/**RATINGS**/
+.rating {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: #fdfdfd;
+  opacity: 0;
+  z-index: 100;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-family: "Changa", sans-serif;
+  text-align: center;
+  transition: all 0.5s;
+  border-radius: 50%;
+  color: blue;
+}
+
+/**REVİEWS**/
+.review {
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  margin-left: 3rem;
+  border-left: 1px solid blue;
+  border-bottom: 1px solid blue;
+  transform: skew(-25deg);
+}
+.review-title {
+  font-size: 1.2rem;
+}
+.review > * {
+  transform: skew(25deg);
+}
+.review-tags {
+  font-size: 0.77rem;
+  color: blue;
+  text-transform: uppercase;
+}
+.review-text {
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
+}
+.review-user {
+  display: flex;
+  align-items: center;
+}
+.review-user img {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+}
+.review-user-detail {
+  font-family: "Changa", sans-serif;
+  margin-right: 1.5rem;
+}
+.review-user-detail .review-user-name {
+  color: blue;
+}
+.review-user-detail .review-user-date {
+  color: #ffb320;
+}
+.review-user-platform {
+  color: #fdfdfd;
+}
+.review-user-platform .fab {
+  margin: 0 0.3rem;
+  transition: all 0.5s;
+}
+.review-user-platform .fab:hover {
+  color: blue;
+}
+.review-user-rating {
+  margin-left: auto;
+}
+.review-user-rating .checked {
+  color: #ffb320;
+}
+
+.card {
+  height: 27rem;
+  perspective: 500px;
+  /*&:hover .card-front{
+      transform: rotateY(180deg);
+  }
+  &:hover .card-back{
+      transform: none;
+  }*/
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+  transition: transform 1.2s;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+.card .card-front, .card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 40px;
+}
+.card .card-front {
+  background-color: #14151A;
+  height: 530px;
+}
+.card .card-front img {
+  border-radius: 40px;
+}
+.card .card-front h4 {
+  font-size: 1.3rem;
+}
+.card .card-back {
+  background-color: blue;
+  transform: rotateY(180deg);
+  display: table;
+}
+.card .card-back-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.card .card-back-content p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+@keyframes mainAni {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  50% {
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/** GENERAL SETTINGS **/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  color: #9f9f9f;
+  background-color: #fdfdfd;
+}
+
+.container {
+  max-width: 56rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-family: "Changa", sans-serif;
+  color: blue;
+}
+
+h2 {
+  font-family: "Changa", sans-serif;
+  font-size: 1.8rem;
+  color: #fdfdfd;
+  letter-spacing: 0.05rem;
+}
+
+h3 {
+  font-family: "Changa", sans-serif;
+  font-size: 1rem;
+  color: blue;
+  letter-spacing: 0.05rem;
+}
+
+h4 {
+  font-family: "Changa", sans-serif;
+  font-size: 0.9rem;
+  color: #fdfdfd;
+  letter-spacing: 0.05rem;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Changa", sans-serif;
+  color: #fdfdfd;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/**TOP HEADER**/
+.top-header {
+  border-bottom: 1px solid blue;
+}
+.top-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-header .container .logo h1 {
+  font-size: 2.7rem;
+  font-family: "Changa", sans-serif;
+  color: blue;
+}
+.top-header .container .login-area span {
+  display: none;
+}
+
+/** NAV HEADER **/
+.nav-header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-header .navbar .navbar-list {
+  display: flex;
+}
+.nav-header .navbar .navbar-list li {
+  line-height: 3rem;
+  position: relative;
+  transition: all 0.5s;
+}
+.nav-header .navbar .navbar-list li .kategoriler {
+  position: absolute;
+  background-color: #2a2c37;
+  width: 150%;
+  left: 50%;
+  z-index: 10;
+  top: 12rem;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.nav-header .navbar .navbar-list li .kategoriler li {
+  line-height: 3rem;
+}
+.nav-header .navbar .navbar-list li:hover {
+  background-color: blue;
+}
+.nav-header .navbar .navbar-list li:hover .kategoriler {
+  opacity: 1;
+  top: 3rem;
+  visibility: visible;
+}
+.nav-header .navbar .navbar-list a {
+  padding: 0 0.35rem;
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+}
+.nav-header .navbar .navbar-list i {
+  color: #fdfdfd;
+  margin-right: 0.25;
+}
+.nav-header .navbar .urun-ara input[type=search], .nav-header .navbar .urun-ara button[type=submit] {
+  border: none;
+  background-color: transparent;
+  color: blue;
+}
+.nav-header .navbar .urun-ara input[type=search]:focus {
+  outline: none;
+}
+.nav-header .navbar .urun-ara input[type=search] {
+  border-bottom: 1px solid blue;
+  padding: 0.2rem;
+}
+.nav-header .navbar .urun-ara button[type=submit] {
+  margin-left: -2.8rem;
+}
+
+/**MAIN SLIDER**/
+.main-silder .single-slide {
+  position: relative;
+}
+.main-silder .single-slide .slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+.main-silder .single-slide .slide-overlay .slide-content {
+  position: absolute;
+  top: 25%;
+  width: 80%;
+  /*border-top: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color; */
+  padding: 4rem 3rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  animation: mainAni 3s ease-out;
+}
+.main-silder .single-slide .slide-overlay .slide-content p {
+  font-size: 1.15rem;
+}
+
+/** CUSTOM OWL CAROUSEL**/
+.owl-theme {
+  position: relative;
+}
+.owl-theme .owl-dots {
+  position: absolute;
+  top: 3.5rem;
+  right: 15%;
+  z-index: 5;
+  display: flex;
+  text-decoration: none;
+}
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  margin-right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 2rem;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.owl-theme .owl-dots .owl-dot.active, .owl-theme .owl-dots .owl-dot:hover {
+  color: blue;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot span {
+  font-size: 1.5rem;
+  font-family: "Changa", sans-serif;
+  background: transparent;
+}
+
+/** LATEST NEWS**/
+.latest-news {
+  display: flex;
+  background-color: blue;
+  height: 4rem;
+  align-items: center;
+}
+.latest-news-title {
+  flex-basis: 12%;
+  text-align: right;
+  padding-right: 2rem;
+}
+.latest-news-content {
+  flex-basis: 88%;
+  background-color: #14151A;
+  height: 100%;
+}
+.latest-news-content .news-ticker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 4rem;
+}
+.latest-news-content .news-ticker p {
+  color: #fdfdfd;
+  font-size: 1rem;
+}
+
+/**POPÜLER ÜRÜNLER SECTİON**/
+.recent-games {
+  background-color: #fdfdfd;
+}
+.recent-games-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+  grid-template-areas: "item-1 item-1 item-1 item-2" "item-3 item-4 item-5 item-6";
+}
+.recent-games-content .recent-game-featured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recent-games-content .recent-game-featured .rating {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+.recent-games-content .recent-game-featured .game-title {
+  font-size: 1.4rem !important;
+}
+.recent-games-content .recent-game {
+  width: 100%;
+  height: 100%;
+  background-color: #14151A;
+  border-radius: 30px;
+}
+.recent-games-content .recent-game-thumbnail {
+  position: relative;
+  overflow: hidden;
+  /*&:first-child{
+      //padding-left: 1.2rem;
+  }*/
+}
+.recent-games-content .recent-game-thumbnail img {
+  width: 100%;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.recent-games-content .recent-game-thumbnail::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(8, 171, 189, 0.45);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.recent-games-content .recent-game:hover .recent-game-thumbnail::after, .recent-games-content .recent-game:focus .recent-game-thumbnail::after {
+  visibility: visible;
+  opacity: 1;
+}
+.recent-games-content .recent-game:hover .recent-game-thumbnail img, .recent-games-content .recent-game:focus .recent-game-thumbnail img {
+  transform: scale(1.1) rotate(5deg);
+  transition: all 0.5s;
+  border-radius: 30px;
+}
+.recent-games-content .recent-game:hover .recent-game-thumbnail .rating, .recent-games-content .recent-game:focus .recent-game-thumbnail .rating {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.recent-games-content .recent-game-content {
+  padding: 0.3rem;
+}
+.recent-games-content .recent-game-content .game-title {
+  margin-bottom: 0.6rem;
+  color: blue;
+}
+.recent-games-content .recent-game-content .game-title a {
+  transition: all 0.5s ease;
+}
+.recent-games-content .recent-game-content .game-title a:hover {
+  color: #bdbdbd;
+}
+.recent-games-content .recent-game-content .game-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recent-games-content .recent-game-content .game-meta .game-comment {
+  color: #08abbd;
+  font-size: 0.9rem;
+  transition: all 0.5s;
+}
+.recent-games-content .recent-game-content .game-meta .game-comment:hover {
+  color: #067f8c;
+}
+.recent-games-content .recent-game-content p {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color: #fdfdfd;
+}
+
+.recent-game-1 {
+  grid-area: item-1;
+}
+
+.recent-game-2 {
+  grid-area: item-2;
+}
+
+.recent-game-3 {
+  grid-area: item-3;
+}
+
+.recent-game-4 {
+  grid-area: item-4;
+}
+
+.recent-game-5 {
+  grid-area: item-5;
+}
+
+.recent-game-6 {
+  grid-area: item-6;
+}
+
+/**SON YORUMLAR SECTİON**/
+/* SIK SORULAN SORULAR SECTION */
+.hero {
+  width: 80%;
+  height: 460px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.hero .container {
+  padding: 0rem 0rem;
+  margin: 0rem 0rem;
+}
+.hero .container h4 {
+  font-family: "Changa";
+  font-size: 1.9rem;
+  text-align: center;
+  color: blue;
+}
+.hero .container .btn-box {
+  display: flex;
+  border-bottom: 1px solid #14151A;
+}
+.hero .container .btn-box button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Changa", sans-serif;
+  margin-bottom: 0rem;
+}
+.hero .container .contenta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% auto;
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+.hero .container .contenta-left {
+  flex-basis: 75%;
+}
+.hero .container .contenta-left a {
+  width: 150px;
+  display: block;
+  padding: 8px 5px;
+  border-radius: 40px;
+  text-decoration: none;
+  background-color: #ffb320;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 20px;
+}
+.hero .container .contenta-left a:hover {
+  width: 150px;
+  display: block;
+  padding: 8px 5px;
+  border-radius: 40px;
+  text-decoration: none;
+  background-color: white;
+  color: #ffb320;
+  text-align: center;
+  font-size: 18.5px;
+}
+.hero .container .contenta-left p {
+  font-size: 0.9rem;
+}
+.hero .container .contenta-left h2 {
+  font-size: 1.3rem;
+  color: blue;
+}
+.hero .container .contenta-right {
+  flex-basis: 25%;
+  text-align: center;
+}
+.hero .container .contenta-right img {
+  width: 200px;
+}
+
+#btn1 {
+  color: blue;
+}
+
+#contenta1 {
+  transform: translateX(0px);
+}
+
+/** SHOWCASE SECTION**/
+.showcase {
+  background-color: #14151A;
+}
+.showcase h2 {
+  text-align: center;
+  color: blue;
+  padding-bottom: 1.5rem;
+  padding-top: -1rem;
+}
+.showcase-content {
+  display: flex;
+  overflow: hidden;
+}
+.showcase-content .showcase-item {
+  position: relative;
+  text-align: center;
+  transition: all 0.5s;
+}
+.showcase-content .showcase-item:hover {
+  transform: scale(1.1);
+}
+.showcase-content .showcase-item:hover .item-image::before, .showcase-content .showcase-item:hover .item-content h3, .showcase-content .showcase-item:hover .item-content i, .showcase-content .showcase-item:hover .item-content p {
+  opacity: 1;
+}
+.showcase-content .showcase-item .item-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 171, 189, 0.85);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.showcase-content .showcase-item .item-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcase-content .showcase-item .item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.showcase-content .showcase-item .item-content h3 {
+  color: #fdfdfd;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 23px;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(-0.5rem);
+}
+.showcase-content .showcase-item .item-content i {
+  font-size: 2.3rem;
+  margin: 0.1rem;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.showcase-content .showcase-item .item-content i:hover {
+  color: #e4e4e4;
+}
+.showcase-content .showcase-item .item-content p {
+  transition: all 0.5s ease;
+  color: #fdfdfd;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(0.5rem);
+}
+
+/* GALLERY SECTION */
+.masonary {
+  margin: 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 11rem);
+  grid-template-rows: repeat(3, 8rem);
+  grid-gap: 0.5rem;
+}
+.masonary-item {
+  position: relative;
+  cursor: pointer;
+}
+.masonary-item-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.masonary-item-2 {
+  grid-row: 1/span 2;
+  grid-column: 2;
+}
+.masonary-item-3 {
+  grid-row: 1;
+  grid-column: 3/span 2;
+}
+.masonary-item-4 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.masonary-item-5 {
+  grid-row: 2;
+  grid-column: 3;
+}
+.masonary-item-6 {
+  grid-row: 2/span 2;
+  grid-column: 4;
+}
+.masonary-item-7 {
+  grid-row: 3;
+  grid-column: 1;
+}
+.masonary-item-8 {
+  grid-row: 3;
+  grid-column: 2/span 2;
+}
+.masonary-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.middle {
+  transition: 1s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.masonary-item .masonary-image {
+  transition: all 1s;
+}
+
+.masonary-item:hover .masonary-image {
+  opacity: 0.3;
+}
+
+.masonary-item:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  padding: 16px 25px;
+  border-radius: 20px;
+}
+
+/** CONTACT SECTION **/
+.contact {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0.95) 100%), url("../img/contact.jpg");
+  background-size: cover;
+  min-height: 90vh;
+}
+.contact-content {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+.contact-content h3 {
+  color: #fdfdfd;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+.contact-content ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact-content ul li i {
+  margin-right: 1rem;
+}
+.contact-content ul li p {
+  font-size: 0.9rem;
+}
+.contact-form {
+  flex: 2;
+  min-height: 25rem;
+  display: flex;
+  align-items: center;
+}
+.contact-form form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form form input, .contact-form form textarea {
+  width: 60%;
+  padding: 0.5rem;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Merriweather", serif;
+  font-size: 0.7rem;
+  display: block;
+  color: #fdfdfd;
+}
+.contact-form form input:focus, .contact-form form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid blue;
+}
+.contact-form form :not(:last-child) {
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  border-bottom: 1px solid #fdfdfd;
+}
+.contact-form form textarea {
+  resize: none;
+}
+.contact-form form input[type=submit] {
+  background-color: blue;
+  color: #fdfdfd;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.contact-form form input[type=submit]:hover {
+  background-color: blue;
+  color: #fdfdfd;
+}
+
+/**FOOTER SECTION**/
+footer {
+  background-color: #14151A;
+  height: 3rem;
+  font-family: "Changa", sans-serif;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+footer .container .copyright {
+  flex: 1;
+  height: 100%;
+}
+footer .container .copyright p {
+  line-height: 3rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+footer .container .down-social-link {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .down-social-link .fc, footer .container .down-social-link .tw, footer .container .down-social-link .yt {
+  line-height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+}
+footer .container .down-social-link .fc {
+  background-color: #ff0084;
+  text-align: center;
+}
+footer .container .down-social-link .yt {
+  background-color: #4dc247;
+  text-align: center;
+}
+footer .container .down-social-link .tw {
+  background-color: #00aced;
+  text-align: center;
+}
+
+.cozum {
+  padding: 1.5rem;
+  background-color: #14151A;
+}
+.cozum .container .hakkimizda-baslik h1 {
+  text-align: center;
+  color: blue;
+  font-size: 3rem;
+}
+.cozum .container .hakkimizda-gorsel img {
+  text-align: center;
+  width: 15%;
+  height: 15%;
+}
+.cozum .container .cozumumuz {
+  display: flex;
+}
+.cozum .container .cozumumuz-yazi {
+  flex: 2.5;
+}
+.cozum .container .cozumumuz-yazi h2 {
+  text-align: left;
+  color: #fdfdfd;
+  font-size: 1.8rem;
+}
+.cozum .container .cozumumuz-yazi p {
+  color: #fdfdfd;
+  font-size: 1rem;
+}
+.cozum .container .cozumumuz-gorsel {
+  align-items: center;
+  flex: 1;
+}
+.cozum .container .cozumumuz-gorsel-img a {
+  display: block;
+}
+.cozum .container .cozumumuz-gorsel-img a img {
+  align-items: left;
+  width: 90%;
+  height: 90%;
+}
+
+.cozum-2 {
+  padding: 1.5rem 0;
+  background-color: #14151A;
+}
+.cozum-2 .container .cozumumuz-2 {
+  display: flex;
+}
+.cozum-2 .container .cozumumuz-2-gorsel {
+  align-items: center;
+  flex: 1;
+}
+.cozum-2 .container .cozumumuz-2-gorsel-img a {
+  display: block;
+}
+.cozum-2 .container .cozumumuz-2-gorsel-img a img {
+  align-items: left;
+  width: 90%;
+  height: 90%;
+}
+.cozum-2 .container .cozumumuz-2-yazi {
+  flex: 1.7;
+}
+.cozum-2 .container .cozumumuz-2-yazi h2 {
+  text-align: left;
+  color: #fdfdfd;
+  font-size: 1.8rem;
+  font-family: "Changa", sans-serif;
+}
+.cozum-2 .container .cozumumuz-2-yazi h4 {
+  text-align: left;
+  color: #fdfdfd;
+  font-size: 1.35rem;
+}
+.cozum-2 .container .cozumumuz-2-yazi p {
+  color: #fdfdfd;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.cozum-3 {
+  padding: 1.5rem 0;
+}
+.cozum-3 .container .cozumumuz-3 {
+  display: flex;
+}
+.cozum-3 .container .cozumumuz-3-gorsel {
+  align-items: center;
+  flex: 1;
+}
+.cozum-3 .container .cozumumuz-3-gorsel-img a {
+  display: block;
+}
+.cozum-3 .container .cozumumuz-3-gorsel-img a img {
+  padding-top: 2rem;
+  align-items: center;
+}
+.cozum-3 .container .cozumumuz-3-yazi {
+  flex: 2.5;
+}
+.cozum-3 .container .cozumumuz-3-yazi h4 {
+  padding-top: 3rem;
+  text-align: left;
+  color: #14151A;
+  font-size: 1.35rem;
+}
+.cozum-3 .container .cozumumuz-3-yazi p {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.cozum-4 {
+  padding: 1rem 0;
+}
+.cozum-4 .container .cozumumuz-4 {
+  display: flex;
+}
+.cozum-4 .container .cozumumuz-4-gorsel {
+  align-items: center;
+  flex: 1;
+}
+.cozum-4 .container .cozumumuz-4-gorsel-img a {
+  display: block;
+}
+.cozum-4 .container .cozumumuz-4-gorsel-img a img {
+  padding-top: 3.25rem;
+  align-items: left;
+  width: 90%;
+  height: 90%;
+}
+.cozum-4 .container .cozumumuz-4-yazi {
+  flex: 1.7;
+}
+.cozum-4 .container .cozumumuz-4-yazi h4 {
+  padding-top: 3rem;
+  text-align: left;
+  color: #14151A;
+  font-size: 1.35rem;
+}
+.cozum-4 .container .cozumumuz-4-yazi p {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.cozum-5 {
+  padding: 1.5rem 0;
+}
+.cozum-5 .container .cozumumuz-5 {
+  display: flex;
+  justify-content: space-between;
+}
+.cozum-5 .container .cozumumuz-5-gorsel {
+  align-items: center;
+  flex: 1;
+}
+.cozum-5 .container .cozumumuz-5-gorsel-img a {
+  display: block;
+}
+.cozum-5 .container .cozumumuz-5-gorsel-img a img {
+  padding-top: 1rem;
+  align-items: left;
+  width: 90%;
+  height: 90%;
+  padding-left: 2rem;
+}
+.cozum-5 .container .cozumumuz-5-yazi {
+  flex: 1.9;
+}
+.cozum-5 .container .cozumumuz-5-yazi h2 {
+  text-align: left;
+  color: #14151A;
+  font-size: 1.8rem;
+}
+.cozum-5 .container .cozumumuz-5-yazi p {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.grid-container {
+  padding: 0rem 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: #14151A;
+  padding: 10px;
+  height: 150px;
+  padding-bottom: -5000rem;
+}
+.grid-container div {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+.grid-container-1 {
+  padding-top: 1.5rem;
+}
+.grid-container-1 h4 {
+  font-size: 1.5rem;
+  font-family: "Changa", sans-serif;
+}
+.grid-container-2 {
+  padding-top: 0.7rem;
+}
+.grid-container-2 h4 {
+  font-size: 1.8rem;
+  font-family: "Changa", sans-serif;
+}
+.grid-container-2 p {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+.grid-container-3 {
+  padding-top: 0.7rem;
+}
+.grid-container-3 h4 {
+  font-size: 1.8rem;
+  font-family: "Changa", sans-serif;
+}
+.grid-container-3 p {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+.grid-container-4 {
+  padding-top: 0.7rem;
+}
+.grid-container-4 h4 {
+  font-size: 1.8rem;
+  font-family: "Changa", sans-serif;
+}
+.grid-container-4 p {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+.gol {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0.95) 100%), url("../img/contact.jpg");
+  background-size: cover;
+  min-height: 30vh;
+  padding: 1.5rem -20rem;
+}
+.gol .bilgi {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+.gol .bilgi-img img {
+  text-align: center;
+  width: 75%;
+  height: 75%;
+  padding-left: 5.5rem;
+}
+.gol .bilgi-star img {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+.gol .bilgi p {
+  color: #fdfdfd;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.gol-right {
+  flex: 1;
+  color: #fdfdfd;
+  min-height: 20rem;
+  margin-right: 0rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+}
+.gol-right-top {
+  display: flex;
+  margin-top: 0rem;
+  align-items: center;
+  margin-left: 0rem;
+}
+.gol-right-top-img {
+  flex: 1;
+  color: #fdfdfd;
+  min-height: 20rem;
+  margin-right: 0rem;
+  z-index: 2;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 2rem;
+  flex-direction: column;
+  border-radius: 50%;
+}
+.gol-right-top-img img {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  border-radius: 50%;
+}
+.gol-right-top-baslik {
+  flex: 4;
+  color: #fdfdfd;
+  min-height: 20rem;
+  margin-right: 0rem;
+  z-index: 2;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 2rem;
+  flex-direction: column;
+  margin-left: -2rem;
+}
+.gol-right-top-baslik h4 {
+  font-size: 1.33rem;
+  text-align: left;
+  line-height: 30px;
+}
+.gol-right-top-baslik p {
+  color: #fdfdfd;
+}
+.gol-right-bottom {
+  margin-top: -5rem;
+  align-items: center;
+  margin-left: 2rem;
+  padding-bottom: 0rem;
+}
+.gol-right-bottom-text h2 {
+  line-height: 40px;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.gol-right-bottom-link {
+  display: flex;
+}
+.gol-right-bottom-link-right {
+  flex: 1;
+  padding-bottom: -1rem;
+}
+.gol-right-bottom-link-right ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.gol-right-bottom-link-right ul li a {
+  font-size: 0.9rem;
+  font-family: "Merriweather", serif;
+}
+.gol-right-bottom-link-left {
+  flex: 1;
+}
+.gol-right-bottom-link-left ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.gol-right-bottom-link-left ul li a {
+  font-size: 0.9rem;
+  font-family: "Merriweather", serif;
+}
+
+/*TEAM SEACTION*/
+.team-members {
+  display: flex;
+}
+.team-members .team-member {
+  width: 100%;
+  height: 100%;
+}
+.team-members .team-member:first-child {
+  margin-right: 2.5rem;
+}
+.team-members .team-member:last-child {
+  margin-left: 2.5rem;
+}
+
+.team .container .section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+section .container .hakkimizda-gorsel img {
+  padding-top: 0rem;
+  text-align: center;
+  align-items: center;
+  width: 5%;
+  height: 5%;
+  padding-bottom: 0rem;
+}
+section .container .grida {
+  display: block;
+  padding: 30px;
+  display: grid;
+  grid-gap: 40px;
+}
+@media (min-width: 760px) {
+  section .container .grida {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  section .container .grida {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  section .container .grida {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+section .container .grida .cola {
+  background-color: blue;
+  padding: 20px;
+  border-radius: 20px;
+  display: block;
+}
+section .container .grida .cola img {
+  border-radius: 10px;
+}
+section .container .grida .cola h4 {
+  padding-top: 0.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+section .container .grida .cola a h3 {
+  color: #fdfdfd;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  font-weight: 300;
+}
+section .container .grida .cola p {
+  text-align: center;
+  color: #14151A;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+section .container .grida .cola p i {
+  color: #9f9f9f;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+section .container .grida .cola p del {
+  color: #9f9f9f;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/**URUNLER SEECTION**/
+.urun {
+  background: white;
+  background-size: cover;
+  min-height: 10vh;
+  border-bottom: 3px solid blue;
+}
+.urun-content {
+  display: flex;
+  margin-top: 2rem;
+  align-items: left;
+}
+.urun-content-gorsel {
+  flex: 2;
+  color: #fdfdfd;
+  min-height: 20rem;
+  margin-right: -3rem;
+  z-index: 2.5;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+}
+.urun-content-gorsel img {
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+.urun-content-yazi {
+  border-radius: 30px;
+  flex: 2;
+  min-height: 18rem;
+  align-items: left;
+}
+.urun-content-yazi h2 {
+  font-size: 2.5rem;
+  color: blue;
+}
+.urun-content-yazi h4 {
+  font-family: "Merriweather", serif;
+  font-size: 1.2rem;
+  color: #14151A;
+  font-weight: bold;
+}
+.urun-content-yazi h4 del {
+  font-size: 0.9rem;
+  color: #9f9f9f;
+}/*# sourceMappingURL=styles.css.map */

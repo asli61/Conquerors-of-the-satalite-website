@@ -1,0 +1,187 @@
+.shalloww {
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 4px 8px 4px 8px;
+    background: linear-gradient(
+        130deg,  #01c7d5,#0703f5
+    );
+    width: 265px;
+    margin: 0 auto;
+    font-size: 24px;
+    color: white;
+    border-radius: 15px;
+}
+
+.shalloww:hover {
+
+    background: linear-gradient(
+        130deg,  #5df3fe,#7674fb
+    );
+}
+
+
+
+
+
+
+.mainLabel {
+
+    position: absolute;
+    z-index: 30;
+    top:15px;
+    width: 100%;
+
+}
+
+.labelStyle {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    color: white
+}
+
+.naklabels{
+
+}
+
+#clearMap {
+    margin-top: 10px; border: 0.5px solid white;border-radius: 50px; background: linear-gradient(130deg,  #3b0179,#61026b); color:white; border-radius: 5px; font-size: 20px; text-align:center; padding: 4px 8px 4px 8px;font-family: 'Rubik', sans-serif;text-align: center;
+
+    transition: all 0.5s ease-in;
+}
+
+#clearMap:hover{
+    background: linear-gradient(
+        130deg,  #d0abf8,#5e4461
+    );
+    border-radius: 15px;
+
+}
+
+#getData{
+    margin-top: 10px; border: 0.5px solid white;border-radius: 50px; background: linear-gradient(130deg,  #3b0179,#61026b); color:white; border-radius: 5px; font-size: 20px; text-align:center; padding: 4px 8px 4px 8px;font-family: 'Rubik', sans-serif;
+}
+
+#getData:hover{
+    background: linear-gradient(
+        130deg,  #d0abf8,#5e4461
+    );
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.ShallowMoon{
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 150%;
+}
+
+.Shallow11{
+    
+        border-radius: 5px;
+        border: 2px solid white;
+        padding: 4px 8px 4px 8px;
+        background: linear-gradient(
+            130deg,  #c2f467,#5ef4f4
+        );
+        width: 265px;
+        margin: 0 auto;
+        font-size: 24px;
+        color: white;
+        border-radius: 15px;
+    
+    
+    
+}
+
+.nakEvent:hover {
+    
+    background: linear-gradient(
+        130deg,  #d0abf8,#5e4461
+    );
+}
+
+.natural {
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 4px 8px 4px 8px;
+    background: linear-gradient(
+        130deg,  #32cd32,#1f64c4
+    );
+    width: 265px;
+    margin: 0 auto;
+    font-size: 24px;
+    color: white;
+    border-radius: 15px;
+}
+
+.natural:hover {
+
+    background: linear-gradient(
+        130deg,  #4af84a,#579af8
+    );
+}
+
+.imgg{
+    max-width: 400px;
+   display: flex;
+    top: 490px;
+  
+    position: absolute;
+    z-index: 30;
+    
+}
+
+.imggg{
+    max-width: 400px;
+   display: flex;
+    top: 630px;
+  
+    position: absolute;
+    z-index: 30;
+    
+}
+
+.deep {
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 4px 8px 4px 8px;
+    background: linear-gradient(
+        130deg,  #a20202,#d2dd01
+    );
+    width: 265px;
+    margin: 0 auto;
+    font-size: 24px;
+    color: white;
+    border-radius: 15px;
+}
+
+.deep:hover {
+
+    background: linear-gradient(
+        130deg,  #f85e5e,#f5fb80
+    );
+}
+
+.unknown {
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 4px 8px 4px 8px;
+    background: linear-gradient(
+        130deg,  #aca9a9,#3a3a39
+    );
+    width: 265px;
+    margin: 0 auto;
+    font-size: 24px;
+    color: white;
+    border-radius: 15px;
+}
+
+.unknown:hover {
+
+    background: linear-gradient(
+        130deg,  #fffefe,#3f3f3c
+    );
+}
+

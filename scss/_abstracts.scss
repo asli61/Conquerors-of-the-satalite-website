@@ -1,0 +1,75 @@
+/** FONTS
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif;
+**/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Merriweather&display=swap');
+
+/** VARIABLES SETTINGS **/
+
+$primary-font:'Changa', sans-serif;
+$secondary-font: 'Merriweather', serif;
+
+$primary-color: blue;
+//#03c03c; //32cd32
+$secondary-color: #14151A;
+$date-color: #ffb320;
+$comment-color: #08abbd;
+$gray-color: #9f9f9f;
+$light-color: #fdfdfd;
+
+
+/** UTILITIES **/
+
+
+.bg{
+    &-dark{
+        background-color: $secondary-color;
+    }
+    &-light{
+        background-color: $light-color;
+    }
+}
+
+.ml{
+    &-2{
+        margin-left: 2rem;
+    }
+}
+
+.text-white{
+
+    color: $light-color;
+
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-normal-boyut{
+    font-size: 1.2rem;
+}
+
+.text-primary{
+
+    color: $primary-color;
+
+}
+
+.text-buyuk-boyut {
+    font-size: 3rem;
+}
+
+/** MIXINS **/
+@mixin flex-display($display, $align-items, $justify-content){
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
